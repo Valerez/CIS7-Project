@@ -37,8 +37,7 @@ public:
             
             if(c >= 'a' && c < 'z')
                 c += 'A' - 'a';
-            //else if (c < 'A' || c < 'Z')
-            //continue;
+   
             
             encytdTxt += (c + key[j] - 2 * 'A') % 26 + 'A';
             j = (j + 1) % key.length();
@@ -58,8 +57,7 @@ public:
             
             if(c >= 'a' && c <= 'z')
                 c += 'A' - 'a';
-            //else if(c < 'A' || c > 'Z')
-            //continue;
+   
             
             dcyptTxt += (c - key[j] + 26) % 26 + 'A';
             j = (j + 1) % key.length();
