@@ -71,7 +71,7 @@ public:
 
 //Function Prototypes
 void menu();
-string removeSpaces(string);
+string remove(string);
 
 int main(int argc, char** argv)
 {
@@ -84,7 +84,7 @@ int main(int argc, char** argv)
     string  outEn = " ",  // encrypted message
     outDe = " ";  // decrypted message
     
-    // stores new string without spaces for
+    // stores new string without spaces, symbols, numbers for
     string  newKey = " ", // key
     newEn = " ",  // encrpted message
     newDe = " ";  // decryted message
@@ -96,8 +96,8 @@ int main(int argc, char** argv)
     cout << "Enter your Encryption and Decryption Key: ";
     getline(cin, inKey);
     
-    // calls function to clear spaces from the string
-    newKey = removeSpaces(inKey);
+    // calls function to clear spaces, symbols, and numbers from the string
+    newKey = remove(inKey);
     
     // defines the instance of the Vigenere class and stores key in vig object
     Vigenere vig(newKey);
@@ -122,9 +122,9 @@ int main(int argc, char** argv)
                 cout << "\nEnter the message you'd like to encrypt: ";
                 getline(cin, inEn);
                 
-                // calls function that removes spaces from string
+                // calls function that removes spaces, symbols, and numbers from string
                 // and stores in newEn
-                newEn = removeSpaces(inEn);
+                newEn = remove(inEn);
                 
                 // stores string in vig object that encrypts message and
                 // stores in outEn
@@ -144,9 +144,9 @@ int main(int argc, char** argv)
                 cout << "\n\nEnter the message you'd like to decrypt: ";
                 getline(cin, inDe);
                 
-                // calls function that removes spaces from string and stores
+                // calls function that removes spaces, symbols, and numbers from string and stores
                 // in newDe
-                newDe = removeSpaces(inDe);
+                newDe = remove(inDe);
                 
                 // stores string in vig object which decrypts message and
                 // stores in outDe
@@ -169,8 +169,8 @@ void menu()
     cout << "\nMENU: Vigenere Cipher\n1. Encrypt Message\n2. Decrypt Message\n";
 }
 
-// function that removes spaces from any given string
-string removeSpaces(string input)
+// function that removes spaces, symbols, and numbers from any given string
+string remove(string input)
 {
     
     input.erase(remove(input.begin(), input.end(), ' '), input.end());
