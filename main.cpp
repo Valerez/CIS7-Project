@@ -181,16 +181,16 @@ string removeSpaces(string input)
         while( !isalnum( b[i] ) && i < b.size() ) b.erase(i,1) ;
     
     // remove numbers from the string
-    b.erase(std::remove(b.begin(), b.end(), '0'), b.end());
-    b.erase(std::remove(b.begin(), b.end(), '1'), b.end());
-    b.erase(std::remove(b.begin(), b.end(), '2'), b.end());
-    b.erase(std::remove(b.begin(), b.end(), '3'), b.end());
-    b.erase(std::remove(b.begin(), b.end(), '4'), b.end());
-    b.erase(std::remove(b.begin(), b.end(), '5'), b.end());
-    b.erase(std::remove(b.begin(), b.end(), '6'), b.end());
-    b.erase(std::remove(b.begin(), b.end(), '7'), b.end());
-    b.erase(std::remove(b.begin(), b.end(), '8'), b.end());
-    b.erase(std::remove(b.begin(), b.end(), '9'), b.end());
+    b.erase(remove(b.begin(), b.end(), '0'), b.end());
+    b.erase(remove(b.begin(), b.end(), '1'), b.end());
+    b.erase(remove(b.begin(), b.end(), '2'), b.end());
+    b.erase(remove(b.begin(), b.end(), '3'), b.end());
+    b.erase(remove(b.begin(), b.end(), '4'), b.end());
+    b.erase(remove(b.begin(), b.end(), '5'), b.end());
+    b.erase(remove(b.begin(), b.end(), '6'), b.end());
+    b.erase(remove(b.begin(), b.end(), '7'), b.end());
+    b.erase(remove(b.begin(), b.end(), '8'), b.end());
+    b.erase(remove(b.begin(), b.end(), '9'), b.end());
     
     // returns cleared string
     return b;
