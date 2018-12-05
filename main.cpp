@@ -35,7 +35,7 @@ public:
         {
             char c = message[i];
             
-            if(c >= 'a' && c < 'z')
+            if(c >= 'a' && c <= 'z')
                 c += 'A' - 'a';
    
             
